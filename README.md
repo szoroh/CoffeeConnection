@@ -7,6 +7,8 @@ Things you may want to cover:
 
 * Ruby version
 
+ruby 2.4.1
+
 * System dependencies
 
 * Configuration
@@ -21,4 +23,3 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
