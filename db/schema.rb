@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181128140034) do
+ActiveRecord::Schema.define(version: 20181204132549) do
+
+  create_table "coffee_profiles", force: :cascade do |t|
+    t.string "name"
+    t.string "roasters"
+    t.integer "mark"
+    t.string "description"
+    t.string "beans_origin_country"
+    t.string "region"
+    t.string "farm"
+    t.string "treatment_method"
+    t.string "variety"
+    t.string "cultivation_attitude"
+    t.string "arabica"
+    t.string "robusta"
+    t.string "roast"
+    t.string "grain_size"
+    t.string "package_quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "recipes", force: :cascade do |t|
     t.string "coffee"

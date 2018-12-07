@@ -1,0 +1,2 @@
+class CoffeeProfile < ApplicationRecord
+end 

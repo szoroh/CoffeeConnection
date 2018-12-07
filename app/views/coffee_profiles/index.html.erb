@@ -1,0 +1,23 @@
+<br/>
+All the coffee profiles
+<br/><br/>
+<%= link_to "create new profile", coffee_profiles_new_path %>
+<br/>
+<% @coffee_profiles.each do |coffee_profile| %>
+  <%= @coffee_profile.id%>
+  <%= @coffee_profile.name %>
+  <%= @coffee_prfile.roasters %>
+  <%= @coffee_profile.mark %>
+  <%= @coffee_profile.description %>
+  <%= @coffee_profile.beans_origin_country %>
+  <%= @coffee_profile.region %>
+  <%= @coffee_profile.farm %>
+  <%= @coffee_profile.treatment_method %>
+  <%= @coffee_profile.variety %>
+  <%= @coffee_profile.cultivation_attitude %>
+  <%= @coffee_profile.arabica %>
+  <%= @coffee_profile.robusta %>
+  <%= @coffee_profile.roast %>
+  <%= @coffee_profile.grain_size %>
+  <%= @coffee_profile.package_quantity %>
+<% end %>

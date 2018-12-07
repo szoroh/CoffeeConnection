@@ -4,7 +4,7 @@ class CreateRecipe < ActiveRecord::Migration[5.1]
     t.string  :coffee
     t.decimal :quantity,          :precision => 4, scale: 1
     t.string  :method
-    t.integer :water_temperature, :precision => 4, scale: 1
+    t.integer :water_temperature
     t.decimal :water_amount,      :precision => 4, scale: 1
     t.string  :grind
     t.string  :aroma
