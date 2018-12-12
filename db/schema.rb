@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20181204132549) do
     t.string "farm"
     t.string "treatment_method"
     t.string "variety"
-    t.string "cultivation_attitude"
+    t.string "cultivation_altitude"
     t.string "arabica"
     t.string "robusta"
     t.string "roast"

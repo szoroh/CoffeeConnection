@@ -10,7 +10,7 @@ class CreateCoffeeProfile < ActiveRecord::Migration[5.1]
     t.string  :farm
     t.string  :treatment_method
     t.string  :variety
-    t.string  :cultivation_attitude
+    t.string  :cultivation_altitude
     t.string  :arabica
     t.string  :robusta
     t.string  :roast
