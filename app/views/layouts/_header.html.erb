@@ -1,0 +1,25 @@
+<nav class="navbar navbar-static-top navbar-expand-lg navbar-dark bg-dark">
+  <%= link_to "Coffee Connection", root_path, 
+      class:  "navbar-brand", 
+      style:  "margin-left: 50px;"
+       %>
+  <%= link_to "Coffee Profiles", coffee_profiles_path,
+      class:  "navbar-brand",
+      style:  "margin-letf: 100px;" %>
+  <%= link_to "Recipes",recipes_path,
+      class:  "navbar-brand",
+      style:  "margin-left: 10px;" %>
+
+  <div class="navbar-nav ml-auto">
+    <%= link_to "Log in",
+        '#',
+        class: "btn btn-primary nav-btn",
+        role:  "button", 
+        style: "margin-right: 10px;" %>
+    <%= link_to "Sign up",
+        '#', 
+        class: "btn btn-primary nav-btn",
+        role: "button",
+        style: "margin-right: 40px;" %>
+  </div>
+</nav>
