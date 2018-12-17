@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  root 'recipes#index'
-  get 'recipes/new'
-  get 'coffee_profiles/new'
-  get 'coffee_profiles/index'
+  
+  root 'home#index'
 
   resources :recipes
+  resources :coffee_profiles
 end
