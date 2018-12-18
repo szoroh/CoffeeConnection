@@ -1,7 +1,54 @@
+@import "bootstrap";
+
 /* table */
 
-table, td, th {
+.table, td, th {
   border: 1px solid black;
   border-collapse: collapse;
+  text-align: left;
+  margin: 30px 0px 0px 0px;
 }
 
+/* headers */
+
+h1 {
+  margin: 10px 0px 0px 30px;
+}
+
+/* coffee profile new form layout */
+
+.coffee_form {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0px 0px 30px;
+}
+
+.coffee_form_item label {
+  min-width: 200px;
+}
+
+.coffee_form_submit {
+  margin: 15px 0px 0px 0px;
+}
+
+/* coffee profile index layout */
+
+.coffee-profile-table-header {
+  margin: 35px 0px 0px 0px;
+}
+
+.new-coffee-profile-link {
+  margin: 10px 0px 0px 0px;
+}
+
+/* recipe new form layout */
+
+.recipes_form {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0px 0px 30px;
+}
+
+.recipes_form_item {
+  min-width: 200px;
+}

@@ -14,7 +14,7 @@ class CoffeeProfile < ApplicationRecord
   validates :treatment_method, presence: true 
   validates :variety, presence: true 
   validates :cultivation_altitude, presence: true,
-                                   numericality: { maximum: 8000}
+                                   numericality: { maximum: 8000 }
   validates :arabica, presence: true
   validates :robusta, presence: true 
   validates :roast, presence: true 
