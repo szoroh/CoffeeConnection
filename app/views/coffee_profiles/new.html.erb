@@ -1,47 +1,70 @@
 <h1>Create coffee profile:</h1>
-<%= form_for coffee_profiles_new_path do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br/><br/>
-  <%= f.label :roasters %>
-  <%= f.text_field :roasters %>
-  <br/><br/>
-  <%= f.label :mark %>
-  <%= f.number_field :mark %>
-  <br/><br/>
-  <%= f.label :description %>
-  <%= f.text_field :description%>
-  <br/><br/>
-  <%= f.label :beans_origin_country %>
-  <%= f.text_field :beans_origin_country %>
-  <br/><br/>
-  <%= f.label :region %>
-  <%= f.text_field :region %>
-  <br/><br/>
-  <%= f.label :farm %>
-  <%= f.text_field :farm %>
-  <br/><br/>
-  <%= f.label :treatment_method %>
-  <%= f.text_field :treatment_method %>
-  <br/><br/>
-  <%= f.label :variety %>
-  <%= f.text_field :variety %>
-  <br/><br/>
-  <%= f.label :cultivation_attitude %>
-  <%= f.text_field :cultivation_attitude %>
-  <br/><br/>
-  <%= f.label :arabica%>
-  <%= f.text_field :arabica%>
-  <br/><br/>
-  <%= f.label :robusta %>
-  <%= f.text_field :robusta %>
-  <br/><br/>
-  <%= f.label :roast %>
-  <%= f.text_field :roast %>
-  <br/><br/>
-  <%= f.label :grain_size %>
-  <%= f.text_field :grain_size %>
-  <br/><br/>
-  <%= f.label :package_quantity %>
-  <%= f.number_field :package_quantity %>
-<% end %>
+  <%= form_for(@coffee_profile) do |f| %>
+  <div class="coffee_form">
+      <div class="coffee_form_item">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+      <div class="coffee_form_item">
+        <%= f.label :roasters %>
+        <%= f.text_field :roasters %>
+      </div>
+      <div class="coffee_form_item">
+        <%= f.label :mark %>
+        <%= f.number_field :mark %>
+      </div>
+      <div class="coffee_form_item">
+        <%= f.label :description %>
+        <%= f.text_field :description%>
+      </div>
+      <div class="coffee_form_item">
+        <%= f.label :beans_origin_country %>
+        <%= f.text_field :beans_origin_country %>
+      </div>
+      <div class="coffee_form_item">
+        <%= f.label :region %>
+        <%= f.text_field :region %>
+      </div>
+      <div class="coffee_form_item">
+        <%= f.label :farm %>
+        <%= f.text_field :farm %>
+      </div>
+      <div class="coffee_form_item">
+        <%= f.label :treatment_method %>
+        <%= f.text_field :treatment_method %>
+      </div>
+      <div class="coffee_form_item">
+        <%= f.label :variety %>
+        <%= f.text_field :variety %>
+      </div>
+      <div class="coffee_form_item">
+        <%= f.label :cultivation_altitude %>
+        <%= f.text_field :cultivation_altitude %>
+      </div>
+      <div class="coffee_form_item"> 
+        <%= f.label :arabica%>
+        <%= f.text_field :arabica%>
+      </div>
+      <div class="coffee_form_item">
+        <%= f.label :robusta %>
+        <%= f.text_field :robusta %>
+      </div>
+      <div class="coffee_form_item">
+        <%= f.label :roast %>
+        <%= f.text_field :roast %>
+      </div>
+      <div class="coffee_form_item">
+        <%= f.label :grain_size %>
+        <%= f.text_field :grain_size %>
+      </div>
+      <div class="coffee_form_item">
+        <%= f.label :package_quantity %>
+        <%= f.number_field :package_quantity %>
+      </div>
+      <div class="coffee_form_submit">
+        <%= f.submit :Submit %>
+      </div>
+    </div>
+  <% end %>
+</div>
+

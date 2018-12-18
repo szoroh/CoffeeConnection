@@ -7,13 +7,13 @@ class CoffeeProfilesController < ApplicationController
     @coffee_profiles = CoffeeProfile.find(params[:id])
   end 
 
-  def new 
+  def new  
     @coffee_profile = CoffeeProfile.new
   end 
 
   def create
     @coffee_profiles = CoffeeProfile.create(coffee_profile_params)
-    if @coffee_profiles.persisted?
+    if @coffee_profiles.save
       redirect_to root_path
     else
       render :new
@@ -22,6 +22,7 @@ class CoffeeProfilesController < ApplicationController
   
   def edit
     @coffee_profile = CoffeeProfile.new(params[:id])
+    render :new 
   end 
 
   def update
@@ -45,6 +46,6 @@ class CoffeeProfilesController < ApplicationController
   end
 
   COFFEE_PROFILE_PARAMS = [:name, :roasters, :mark, :description, :beans_origin_country,:region, :farm,
-                           :treatment_method, :variety, :cultivation_attitude, :arabica, :robusta, :roast, 
+                           :treatment_method, :variety, :cultivation_altitude, :arabica, :robusta, :roast, 
                            :grain_size, :package_quantity]
 end 

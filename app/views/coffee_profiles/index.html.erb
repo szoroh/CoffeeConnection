@@ -1,23 +1,42 @@
-<br/>
-All the coffee profiles
-<br/><br/>
-<%= link_to "create new profile", coffee_profiles_new_path %>
-<br/>
-<% @coffee_profiles.each do |coffee_profile| %>
-  <%= @coffee_profile.id%>
-  <%= @coffee_profile.name %>
-  <%= @coffee_prfile.roasters %>
-  <%= @coffee_profile.mark %>
-  <%= @coffee_profile.description %>
-  <%= @coffee_profile.beans_origin_country %>
-  <%= @coffee_profile.region %>
-  <%= @coffee_profile.farm %>
-  <%= @coffee_profile.treatment_method %>
-  <%= @coffee_profile.variety %>
-  <%= @coffee_profile.cultivation_attitude %>
-  <%= @coffee_profile.arabica %>
-  <%= @coffee_profile.robusta %>
-  <%= @coffee_profile.roast %>
-  <%= @coffee_profile.grain_size %>
-  <%= @coffee_profile.package_quantity %>
-<% end %>
+<h2><%= link_to "Create new profile", coffee_profiles_new_path %></h2>
+<table class="table">
+  <thead>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Roasters</th>
+      <th>Mark</th>
+      <th>Description</th>
+      <th>Beans origin country</th>
+      <th>Region</th>
+      <th>Farm</th>
+      <th>Treatment method</th>
+      <th>Variety</th>
+      <th>Cultivation altitude</th>
+      <th>Arabica</th>
+      <th>Robusta</th>
+      <th>Roast</th>
+      <th>Grain size</th>
+      <th>Package quantity</th>
+  </thead>
+    <tr>
+        <% @coffee_profiles.each do |coffee_profile| %>
+        <td><%= coffee_profile.id %></td>
+        <td><%= coffee_profile.name %></td>
+        <td><%= coffee_profile.roasters %></td>
+        <td><%= coffee_profile.mark %></td>
+        <td><%= coffee_profile.description %></td>
+        <td><%= coffee_profile.beans_origin_country %></td>
+        <td><%= coffee_profile.region %></td>
+        <td><%= coffee_profile.farm %></td>
+        <td><%= coffee_profile.treatment_method %></td>
+        <td><%= coffee_profile.variety %></td>
+        <td><%= coffee_profile.cultivation_altitude %></td>
+        <td><%= coffee_profile.arabica %></td>
+        <td><%= coffee_profile.robusta %></td>
+        <td><%= coffee_profile.roast %></td>
+        <td><%= coffee_profile.grain_size %></td>
+        <td><%= coffee_profile.package_quantity %></td>
+      <% end %>
+    </tr>
+</table>
+
