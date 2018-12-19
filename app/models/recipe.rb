@@ -1,5 +1,4 @@
 class Recipe < ApplicationRecord 
-  belongs_to :coffee_profile
 
   validates :coffee, presence: true,
                      length: { in: 3..70 }
@@ -9,18 +8,18 @@ class Recipe < ApplicationRecord
   validates :water_temperature, presence: true,
                                 numericality: { in: 0..100 }
   validates :water_amount, presence: true,
-                           numericality: { in: 0..500 }
-  validates :girnd, presence: true 
+                            numericality: { in: 0..500 }
+  validates :grind, presence: true 
   validates :aroma, presence: true 
   validates :aroma_points, presence: true,
-                           numericality: { in: 0..25 }
+                            numericality: { in: 0..25 }
   validates :taste, presence: true
   validates :taste_points, presence: true,
-                           numericality: { in: 0..25 }
+                            numericality: { in: 0..25 }
   validates :body, presence: true 
   validates :body_points, presence: true, 
                           numericality: { in: 0..25 }
   validates :astringency, presence: true
   validates :astringency_points, presence: true,
-                                 numericality: { in: 0..25 }
-end 
+                                  numericality: { in: 0..25 }               
+end
