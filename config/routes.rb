@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'coffee_profiles/new'
   get 'recipes/new'
-  #get 'new' => 'recipes#new'
+  get 'new' => 'recipes#new'
   
   resources :recipes
   resources :coffee_profiles
