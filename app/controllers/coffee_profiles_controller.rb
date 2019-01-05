@@ -1,4 +1,6 @@
 class CoffeeProfilesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @coffee_profiles = CoffeeProfile.all
   end 

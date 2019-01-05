@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181204132549) do
+ActiveRecord::Schema.define(version: 20190104151656) do
 
   create_table "coffee_profiles", force: :cascade do |t|
     t.string "name"
@@ -50,5 +50,8 @@ ActiveRecord::Schema.define(version: 20181204132549) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+# Could not dump table "users" because of following StandardError
+#   Unknown type 'stirng' for column 'name'
 
 end
