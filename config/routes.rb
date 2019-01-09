@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
+  authenticated do
+    root to: 'user#index'
+  end 
+
   root to: 'home#index'
 
-  get 'coffee_profiles/new'
-  get 'recipes/new'
-  get 'new' => 'recipes#new'
+  devise_for :users
   
   resources :recipes
   resources :coffee_profiles
