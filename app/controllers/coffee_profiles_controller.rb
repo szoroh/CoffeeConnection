@@ -47,7 +47,7 @@ class CoffeeProfilesController < ApplicationController
     params.require(:coffee_profile).permit(COFFEE_PROFILE_PARAMS)
   end
 
-  COFFEE_PROFILE_PARAMS = [:name, :roasters, :mark, :description, :beans_origin_country,:region, :farm,
+  COFFEE_PROFILE_PARAMS = [:id, :name, :roasters, :mark, :description, :beans_origin_country,:region, :farm,
                            :treatment_method, :variety, :cultivation_altitude, :arabica, :robusta, :roast, 
                            :grain_size, :package_quantity]
 end 
