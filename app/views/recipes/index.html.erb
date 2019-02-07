@@ -1,45 +1,19 @@
-<br/>
-<%= link_to 'Create new recipe', new_recipe_path %>
-<br/>
-<%= link_to 'Create a new coffee profile', new_coffee_profile_path %>
-<br/>
-Coffee:
-<br/>
-<table style="width:100%">
+<center><h1><strong>Recipes List</strong></h1></center>
+<table class="table table-striped table-bordered">
   <thead>
-    <th>Id</th>
     <th>Coffee</th>
-    <th>Quantity</th>
     <th>Method</th>
-    <th>Water temperature</th>
-    <th>Water amount</th>
-    <th>Grind</th>
-    <th>Aroma</th>
-    <th>Aroma points</th>
-    <th>Taste</th>
-    <th>Taste points</th>
-    <th>Body</th>
-    <th>Body points</th>
-    <th>Astringency</th>
-    <th>Astringency points</th>
+    <th>Quantity</th>
+    <th span="1"></th>
   </thead>
   <% @recipes.each do |recipe| %>
-  <tr>
-    <td><%= recipe.id %></td>
-    <td><%= recipe.coffee %></td>
-    <td><%= recipe.quantity %></td>
-    <td><%= recipe.method %></td>
-    <td><%= recipe.water_temperature %></td>
-    <td><%= recipe.water_amount %></td>
-    <td><%= recipe.grind %></td>
-    <td><%= recipe.aroma %></td>
-    <td><%= recipe.aroma_points %></td>
-    <td><%= recipe.taste %></td>
-    <td><%= recipe.taste_points %></td>
-    <td><%= recipe.body %></td>
-    <td><%= recipe.body_points %></td>
-    <td><%= recipe.astringency %></td>
-    <td><%= recipe.astringency_points %></td>
-  </tr>
+    <tr>
+      <td><%= recipe.coffee %></td>
+      <td><%= recipe.method %></td>
+      <td><%= recipe.quantity  %></td>
+      <td><%= link_to "Show", recipe_path(recipe) %></td>
+    </tr>
   <% end %>
 </table>
+
+

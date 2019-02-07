@@ -9,8 +9,20 @@
   </head>
 
   <body>
-    <%= render 'layouts/alerts' %>
     <%= render 'layouts/header' %>
-    <%= yield %>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2"></div>
+          <div class="col-md-8">
+            <% flash.each do |key, value| %>
+              <%= content_tag :p, value, class: "alert alert-danger flash#{key}" if key == 'alert' %>
+              <%= content_tag :p, value, class: "alert alert-success flash#{key}" if key == 'notice'%>
+          <% end %>
+          </div>
+        </div>
+        <%= yield %>
+        <%= render 'layouts/footer' %>
+      </div>
+    </div>
   </body>
 </html>

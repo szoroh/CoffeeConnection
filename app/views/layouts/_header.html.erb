@@ -1,25 +1,48 @@
-<nav class="navbar navbar-static-top navbar-expand-lg navbar-dark bg-dark">
-  <%= link_to "Coffee Connection", root_path, 
-      class:  "navbar-brand", 
-      style:  "margin-left: 50px;"
-       %>
-  <%= link_to "Coffee Profiles", coffee_profiles_path,
-      class:  "navbar-brand",
-      style:  "margin-letf: 100px;" %>
-  <%= link_to "Recipes",recipes_path,
-      class:  "navbar-brand",
-      style:  "margin-left: 10px;" %>
-
-  <div class="navbar-nav ml-auto">
-    <%= link_to "Log in",
-        new_user_session_path,
-        class: "btn btn-primary nav-btn",
-        role:  "button", 
-        style: "margin-right: 10px;" %>
-    <%= link_to "Sign up",
-        new_user_registration_path, 
-        class: "btsn btn-primary nav-btn",
-        role: "button",
-        style: "margin-right: 40px;" %>
+<nav class="navbar navbar-static-top navbar-expand-lg " style="background-color: #484848;">
+  <%= link_to "Coffee Connection",
+      root_path,
+      class: "navbar-brand font-weight-bold",
+      style: "color: white; " 
+    %> 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMark" aria-controls="navbarNavAltMark" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <% if user_signed_in? %>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span id="navbar-user-name" class="nav-text" style="color: white">
+              <%= current_user.name %>
+            </span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "Coffee profiles", coffee_profiles_path,
+                class: "dropdown-item" %>
+            <%= link_to "Recipes", recipes_path,
+                class: "dropdown-item" %>
+            <%= link_to "Profile", '#',
+                class: "dropdown-item" %>
+            <div class="dropdown-divider"></div>
+              <%= link_to "Log out", destroy_user_session_path,
+                  method: :delete,
+                  class: "dropdown-item" %>
+            </div>
+        </li>
+      </ul>
+    <% else %>
+      <div class="navbar-nav ml-auto">
+        <a><%= link_to "Log in", new_user_session_path,
+            class: "btn btn-primary nav-btn",
+            role: "button",
+            style: "margin-right: 10px;" %>
+        </a>
+        <a>
+        <%= link_to "Sign up", new_user_registration_path,
+            class: "btn btn-primary nav-btn",
+            role: "button" %>
+        </a>
+      </div>
+    <% end %>
   </div>
 </nav>
