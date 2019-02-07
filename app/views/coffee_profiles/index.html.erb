@@ -1,42 +1,19 @@
-<h2><%= link_to "Create new profile", new_coffee_profile_path %></h2>
-<table class="width:100%">
-  <thead>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Roasters</th>
-      <th>Mark</th>
-      <th>Description</th>
-      <th>Beans origin country</th>
-      <th>Region</th>
-      <th>Farm</th>
-      <th>Treatment method</th>
-      <th>Variety</th>
-      <th>Cultivation altitude</th>
-      <th>Arabica</th>
-      <th>Robusta</th>
-      <th>Roast</th>
-      <th>Grain size</th>
-      <th>Package quantity</th>
+<center><h1><storng>Coffee Profiles List</strong></h1></center>
+
+<table class="table table-striped table-bordered">
+ <thead>
+    <th>Name</th>
+    <th>Roasters</th>
+    <th>Package quantity</th>
+    <th span="1"></th>
   </thead>
+  <% @coffee_profiles.each do |profile| %>
     <tr>
-        <% @coffee_profiles.each do |coffee_profile| %>
-        <td><%= coffee_profile.id %></td>
-        <td><%= coffee_profile.name %></td>
-        <td><%= coffee_profile.roasters %></td>
-        <td><%= coffee_profile.mark %></td>
-        <td><%= coffee_profile.description %></td>
-        <td><%= coffee_profile.beans_origin_country %></td>
-        <td><%= coffee_profile.region %></td>
-        <td><%= coffee_profile.farm %></td>
-        <td><%= coffee_profile.treatment_method %></td>
-        <td><%= coffee_profile.variety %></td>
-        <td><%= coffee_profile.cultivation_altitude %></td>
-        <td><%= coffee_profile.arabica %></td>
-        <td><%= coffee_profile.robusta %></td>
-        <td><%= coffee_profile.roast %></td>
-        <td><%= coffee_profile.grain_size %></td>
-        <td><%= coffee_profile.package_quantity %></td>
-      <% end %>
+      <td><%= profile.name %></td>
+      <td><%= profile.roasters %></td>
+      <td><%= profile.package_quantity %></td>
+      <td><%= link_to "Show", '#' %></td>
     </tr>
+  <% end %>
 </table>
 

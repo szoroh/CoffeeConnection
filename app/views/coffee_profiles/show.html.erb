@@ -1,0 +1,73 @@
+<center><h1><strong><%= @coffee_profile. name %> - <%= @coffee_profile.roasters %> - Profile</strong></h1></center>
+  <br>
+<div class="container">
+  <div class="row justify-content-md-center">
+
+    <div class="background-grid">
+      <div class="col-md-auto">
+        <b><%= @coffee_profile.name %> <%= @coffee_profile.roasters %></b>
+        - <%= @coffee_profile.package_quantity %>g
+      </div>
+    </div>
+
+    <div class="w-100 d-none d-lg-block"></div>
+    <br>
+
+    <div class="row justify-content-md-center">
+      <div class="background-grid">
+        <div class="col-md-auto">
+          <b>Description: </b><%= @coffee_profile.description %>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-100 d-none d-lg-block"></div>
+    <br>
+
+    <div class="row justify-content-md-center">
+      <div class="background-grid">
+        <div class="col-md-auto">
+          <b><center>Details</center></b>
+            <br>
+          <b>Beans origin country: </b><%= @coffee_profile.beans_origin_country %>
+            <br>
+          <b>Cultivation altitude: </b><%= @coffee_profile.cultivation_altitude %>
+            <br>
+          <b>Region: </b><%= @coffee_profile.region %>
+            <br>
+          <b>Farm: </b><%= @coffee_profile.farm %>
+            <br>
+          <b>Treatment method: </b><%= @coffee_profile.treatment_method %>
+            <br>
+          <b>Variety: </b><%= @coffee_profile.variety %>
+            <br>
+          <b>Arabica: </b><%= @coffee_profile.arabica %>
+            <br>
+          <b>Robusta: </b><%= @coffee_profile.robusta %>
+            <br>
+          <b>Roast: </b><%= @coffee_profile.roast %>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-100 d-none d-lg-block"></div>
+    <br>
+
+    <div class="row justify-content-md-center">
+      <div class="background-grid">
+        <div class="col-md-auto">
+          <b>Mark: </b><%= @coffee_profile.mark %> / 5
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<center>
+  Created at: <%= @coffee_profile.created_at %>
+    <br>
+  <%= link_to "Coffee profiles list", coffee_profiles_path %>
+</center>
+
+<>
+

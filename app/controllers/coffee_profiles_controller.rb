@@ -6,7 +6,7 @@ class CoffeeProfilesController < ApplicationController
   end 
 
   def show 
-    @coffee_profiles = CoffeeProfile.find(params[:id])
+    @coffee_profile = CoffeeProfile.find(params[:id])
   end 
 
   def new  
@@ -14,8 +14,8 @@ class CoffeeProfilesController < ApplicationController
   end 
 
   def create
-    @coffee_profiles = CoffeeProfile.create(coffee_profile_params)
-    if @coffee_profiles.save
+    @coffee_profile = CoffeeProfile.create(coffee_profile_params)
+    if @coffee_profile.save
       redirect_to root_path
     else
       render :new

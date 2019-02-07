@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   authenticated do
-    root to: 'users#index'
+    root to: 'coffee_profiles#index', as: '/'
   end 
 
   root to: 'home#index'
