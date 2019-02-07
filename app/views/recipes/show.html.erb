@@ -1,0 +1,70 @@
+<center><h1><strong><%= @recipe.coffee %>Recipe</strong></h1></center>
+  <br><br>
+<div class="container">
+  <div class="row justify-content-md-center">
+
+    <div class="background-grid">
+      <div class="col-md-auto">
+        <b>Coffee: </b><%= @recipe.coffee %>
+          <br>
+        <b>Quantity: </b><%= @recipe.quantity %>g
+          <br>
+        <b>Method: </b><%= @recipe.method %>
+      </div>
+    </div>
+
+    <div class="background-grid">
+      <div class="col-md-auto">
+        <b>Water temperature: </b><%= @recipe.water_temperature %>°C
+          <br>
+        <b>Water amount: </b><%= @recipe.water_amount %>g
+          <br>
+        <b>Grind: </b><%= @recipe.grind %>
+          <br>
+        <b>Brew time: </b><%= @recipe.brew_time %>
+      </div>
+    </div>
+
+    <div class="w-100 d-none d-lg-block"></div>
+    <br><br>
+
+  <div class="row justify-content-md-center">
+    <div class="background-grid">
+      <div class="col col-md-auto">
+        <b>Aroma: </b><%= @recipe.aroma %>
+          <br>
+        <b>Aroma points: </b><%= @recipe.aroma_points %> / 25 
+      </div>
+    </div>
+
+    <div class="background-grid">
+      <div class="col col-md-auto">
+        <b>Taste: </b><%= @recipe.taste %>
+          <br>
+        <b>Taste points: </b><%= @recipe.taste_points %> / 25
+      </div>
+    </div>
+
+    <div class="background-grid">
+      <div class="col col-md-auto">
+        <b>Body: </b><%= @recipe.body %>
+          <br>
+        <b>Body points: </b><%= @recipe.body_points %> / 25
+      </div>
+    </div>
+
+    <div class="background-grid">
+      <div class="col col-md-auto">
+        <b>Astringency: </b><%= @recipe.astringency %>
+          <br>
+        <b>Astringency points: </b><%= @recipe.astringency_points %> / 25
+      </div>
+    </div>
+  </div >
+</div>
+
+<center>
+  Created at: <%= @recipe.created_at %>
+    <br>
+  <%= link_to "Recipe list", recipes_path %>
+</center>
