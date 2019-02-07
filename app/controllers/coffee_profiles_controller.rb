@@ -43,6 +43,10 @@ class CoffeeProfilesController < ApplicationController
 
   private
 
+  def set_coffee_profile
+    @coffee_profile = CoffeeProfile.find(params[:id])
+  end 
+
   def coffee_profile_params
     params.require(:coffee_profile).permit(COFFEE_PROFILE_PARAMS)
   end
