@@ -1,4 +1,5 @@
-class Recipe < ApplicationRecord 
+class Recipe < ApplicationRecord
+  belongs_to :coffee_profile
 
   validates :coffee, presence: true,
                      length: { in: 3..70 }

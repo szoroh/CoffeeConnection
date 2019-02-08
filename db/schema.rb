@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190202184214) do
+ActiveRecord::Schema.define(version: 20190208075441) do
 
   create_table "coffee_profiles", force: :cascade do |t|
     t.string "name"
@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(version: 20190202184214) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "brew_time"
+    t.integer "coffee_profile_id"
+    t.index ["coffee_profile_id"], name: "index_recipes_on_coffee_profile_id"
     t.index ["user_id"], name: "index_recipes_on_user_id"
   end
 
