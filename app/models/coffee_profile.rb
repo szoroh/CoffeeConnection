@@ -4,8 +4,7 @@ class CoffeeProfile < ApplicationRecord
   validates :name, presence: true,
                    uniqueness: true 
   validates :roasters, presence: true
-  validates :mark, uniqueness: true, 
-                   numericality: { in: 0..5, only_integer: true  }
+  validates :mark, numericality: { in: 0..6, only_integer: true  }
   validates :description, presence: true,
                           length: { maximum: 700 }
   validates :beans_origin_country, presence: true  

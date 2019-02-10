@@ -63,11 +63,23 @@
   </div>
 </div>
 
-<center>
-  Created at: <%= @coffee_profile.created_at %>
-    <br>
-  <%= link_to "Coffee profiles list", coffee_profiles_path %>
-</center>
+<center>Created at: <%= @coffee_profile.created_at %></center>
 
-<>
+<div class="w-100 d-none d-lg-block"></div>
+<br>
+
+<div class="row justify-content-md-center">
+  <div class="background-grid">
+    <div class="col-md-auto">
+      <% @coffee_profile.recipes.each do |recipe| %>
+        <%= recipe.coffee %>
+        <%= recipe.method %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<center>
+  <%= link_to 'Create new recipe for your coffee!', new_coffee_profile_recipe_path(@coffee_profile) %>
+</center>
 

@@ -1,5 +1,6 @@
 <center><h1><strong>Create New Recipe</strong></h1></center>
 <div class="recipes_form">
+<%# binding.pry %>
   <%= form_for(@recipe) do |f| %>
     <div class="recipes_form_item">
       <%= f.label :coffee %>
@@ -56,6 +57,11 @@
     <div class="recipes_form_item">
       <%= f.label :astringency_points %>
       <%= f.number_field :astringency_points %>
+    </div>
+    <%= f.hidden_field(:coffee_profile_id, :value => @recipe.coffee_profile_id) %>
+    <div class="recipes_form_item">
+      <%= f.label :brew_time %>
+      <%= f.number_field :brew_time %>
     </div>
     <div class="recipes_form_item">
       <%= f.submit :Submit %>
