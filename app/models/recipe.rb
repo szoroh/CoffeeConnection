@@ -23,5 +23,6 @@ class Recipe < ApplicationRecord
   validates :astringency, presence: true
   validates :astringency_points, presence: true,
                                   numericality: { in: 0..25 }   
-  validates :brew_time, presence: true            
+  validates :brew_time, presence: true,
+                        numericality: { in: 0..500 }           
 end
