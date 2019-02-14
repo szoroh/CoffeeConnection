@@ -4,9 +4,12 @@ Rails.application.routes.draw do
   end 
 
   root to: 'home#index'
+
+  resources :coffee_profiles do 
+    resources :recipes, only: [:new, :create, :show]
+  end 
   
-  resources :recipes
-  resources :coffee_profiles
+  resources :recipes, only: [:index, :show, :create]
 
   devise_for :users
 end
