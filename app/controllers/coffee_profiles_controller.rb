@@ -1,45 +1,44 @@
 class CoffeeProfilesController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_coffee_profile, only: [:show, :edit, :update, :destroy]
 
   def index
     @coffee_profiles = CoffeeProfile.all
   end 
 
-  def show 
+  def show
     @coffee_profile = CoffeeProfile.find(params[:id])
-  end 
+  end
 
-  def new  
-    @coffee_profile = CoffeeProfile.new
-  end 
+  def new
+    @cofee_profile = CoffeeProfile.new
+  end
+
+  def edit
+  end
 
   def create
-    @coffee_profile = CoffeeProfile.create(coffee_profile_params)
+    @coffee_profile = CoffeeProfile.new(coffee_profile_params)
+    
     if @coffee_profile.save
-      redirect_to root_path
+      redirect_to root_url
     else
       render :new
     end
-  end
-  
-  def edit
-    @coffee_profile = CoffeeProfile.new(params[:id])
-    render :new 
   end 
 
   def update
-    @coffee_profile = CoffeeProfile.find(params[:id])
+
     if @coffee_profile.update(coffee_profile_params)
-      redirect_to coffee_profile_path
+      redirect_to root_url
     else
       render :new
-    end 
+    end
   end 
 
   def destroy
-    CoffeeProfile.destroy(params[:id])
-    redirect_to coffee_profile_path
-  end 
+    @coffee_profile.destroy
+  end
 
   private
 
