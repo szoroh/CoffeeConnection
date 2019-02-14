@@ -5,14 +5,14 @@
     <th>Name</th>
     <th>Roasters</th>
     <th>Package quantity</th>
-    <th span="1"></th>
+    <th >Details</th>
   </thead>
   <% @coffee_profiles.each do |profile| %>
     <tr>
       <td><%= profile.name %></td>
       <td><%= profile.roasters %></td>
       <td><%= profile.package_quantity %></td>
-      <td><%= link_to "Show", '#' %></td>
+      <td><%= link_to "Show", coffee_profile_path(profile) %></td>
     </tr>
   <% end %>
 </table>

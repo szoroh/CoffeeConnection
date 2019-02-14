@@ -1,6 +1,6 @@
 <center><h1><strong>Create New Recipe</strong></h1></center>
 <div class="recipes_form">
-  <%= form_for(@recipe) do |f| %>
+  <%= form_for([@coffee_profile, Recipe.new]) do |f| %>
     <div class="recipes_form_item">
       <%= f.label :coffee %>
       <%= f.text_field :coffee %>
@@ -56,6 +56,10 @@
     <div class="recipes_form_item">
       <%= f.label :astringency_points %>
       <%= f.number_field :astringency_points %>
+    </div>
+    <div class="recipes_form_item">
+      <%= f.label :brew_time %>
+      <%= f.number_field :brew_time %>
     </div>
     <div class="recipes_form_item">
       <%= f.submit :Submit %>
