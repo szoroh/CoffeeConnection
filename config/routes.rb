@@ -12,4 +12,8 @@ Rails.application.routes.draw do
   resources :recipes, only: [:index, :show, :create]
 
   devise_for :users
+
+  as :user do
+    delete 'profile', to: 'registrations#destroy'
+  end 
 end
