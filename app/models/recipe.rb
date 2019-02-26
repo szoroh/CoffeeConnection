@@ -5,7 +5,7 @@ class Recipe < ApplicationRecord
                      length: { in: 3..70 }
   validates :quantity, presence: true, 
                        numericality: { greater_than_or_equal_to: 0 }
-  validates :method, presence: true 
+  validates :brew_method, presence: true 
   validates :water_temperature, presence: true,
                                 numericality: { in: 0..100 }
   validates :water_amount, presence: true,
