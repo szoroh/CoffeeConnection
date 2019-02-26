@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190208075441) do
+ActiveRecord::Schema.define(version: 20190219124454) do
 
   create_table "coffee_profiles", force: :cascade do |t|
     t.string "name"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20190208075441) do
   create_table "recipes", force: :cascade do |t|
     t.string "coffee"
     t.decimal "quantity", precision: 4, scale: 1
-    t.string "method"
+    t.string "brew_method"
     t.integer "water_temperature"
     t.decimal "water_amount", precision: 4, scale: 1
     t.string "grind"
